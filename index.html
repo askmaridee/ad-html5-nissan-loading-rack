@@ -1,0 +1,586 @@
+<div id="hc_richmedia">
+    <meta name="viewport" content="width=device-width">
+	<script type="text/javascript">
+		if(!window.jQuery || !window.$) {
+			document.write('\x3Cscript src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript">\x3C/script>');
+		}
+	</script>
+	<script type="text/javascript" src="mraid.js"></script>
+	<style type="text/css">
+	body {margin: 0px;}
+	#hc_richmedia {
+		position:relative;
+		width:320px;
+		margin:0 auto;
+      /*border:solid 1px red;*/
+	}
+	#hc_richmedia .hc_initial_view {
+		position:relative;
+		z-index:1;
+	}
+	#hc_richmedia .hc_content {
+		background: url('images/32946.png') no-repeat top left;
+		background-size: cover; 
+		position:relative;
+		width:320px;
+		height:422px;
+		text-align:center;
+		z-index:1;
+	}
+	#hc_richmedia .hc_closebtn {
+		position:absolute;
+		top:0;
+		right:0;
+		z-index:2;
+		cursor:pointer;
+	}
+	#hc_richmedia .hc_closebtn img {
+		position:relative;
+		z-index:20;
+	}
+	#hc_richmedia .hc_content h3 {
+		margin-top:0;
+	}
+	#hc_richmedia .hc_blockimg {
+		display:block;
+	}
+	a img {border: none;}
+	/* custom styles */
+	#hc_noclick1 {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	
+	#hc_noclick1 img {
+		width:55px;
+	}
+	
+	#hc_frame1 .hc_text_1 {
+		width: 237px;
+		position: relative;
+		top: 34px;
+		left: 20px;
+	}
+	#hc_frame1 .hc_versa_1 {
+		width: 320px;
+		position: relative;
+		top: 100px;
+		left: 0px;
+	}
+	#hc_frame1 .hc_button_1 {
+		position: relative;
+		top: 134px;
+		left: 95px;
+	}
+	#hc_frame1 .hc_button_1 img {
+		width: 110px;
+	}
+	
+	#hc_frame2 .hc_text_2_1 {
+		width: 149px;
+		position: relative;
+		top: 45px;
+		left: 0px;
+	}
+	#hc_frame2 .hc_text_2_2 {
+		width: 285px;
+		position: relative;
+		top: 60px;
+		left: 0px;
+	}
+	#hc_frame2 .hc_versa_2 {
+		width: 73px;
+		position: relative;
+		top: 100px;
+		left: 55px;
+	}
+	#hc_frame2 .hc_button_2 {
+		position: relative;
+		top: 130px;
+		left: -40px;
+	}
+	#hc_frame2 .hc_button_2 img {
+		width: 110px;
+	}
+	
+	#end_button .hc_button_3 {
+		position: relative;
+		top: 315px;
+		left: 95px;
+		z-index: 10;
+	}
+	#end_button .hc_button_3 img {
+		width: 110px;
+	}
+	
+	#hc_frame4 .hc_text_4 {
+		width: 232px;
+		position: relative;
+		top: 35px;
+		left: 20px;
+	}
+	
+	#hc_frame4 .hc_versa_4 {
+		width: 302px;
+		position: relative;
+		top: 75px;
+		left: 0px;
+	}
+
+	#hc_frame4 .hc_button_4 {
+		position: relative;
+		top: 95px;
+		left: 95px;
+		z-index: 10;
+	}
+	#hc_frame4 .hc_button_4 img {
+		width: 110px;
+	}
+
+
+	#hc_content #hc_frame3 {
+		background: url('images/32947.jpg') no-repeat top left;
+		background-size: cover; 
+		position:absolute;
+		top: 0px;
+		left: 0px;
+		width:320px;
+		height:422px;
+		text-align:center;
+		z-index:1;
+	}
+
+	#hc_content .car {
+	    width: 320px;
+	    height: 158px;
+	    position: absolute;
+	    z-index: 1;
+	    left: 0px;
+	    top: 0;
+	}
+	
+	#hc_content .car-trunk {
+	    width: 165px;
+	    height: 88px;
+	    position: absolute;
+	    left: 80px;
+	    top: 40px;
+	}
+	
+	#hc_content .conveyor {
+		background: url('images/32931.png') no-repeat top left;
+		background-size: cover; 
+	    height: 304px;
+	    width: 320px;
+	    z-index: 10;
+	    left: 0;
+	    bottom: 0;
+	    position: absolute;
+	}
+	
+	#hc_content .belt-item {
+	    width: 60px;
+	    height: 60px;
+	    position: absolute;
+	    z-index: 11;
+	    display: none;
+	}
+	
+	#hc_content .belt-item[data-idx="0"] {
+	    background: url('images/32933.png') no-repeat top left;
+		background-size: cover;
+	}
+	#hc_content .in-trunk[data-idx="0"] {
+		position: absolute;
+		top: 80px;
+		left: 160px;
+		z-index: 5;
+	}
+	#hc_content .belt-item[data-idx="1"] {
+	    background: url('images/32935.png') no-repeat top left;
+		background-size: cover;
+		width: 73px;
+	}
+	#hc_content .in-trunk[data-idx="1"] {
+		position: absolute;
+		top: 74px;
+		left: 74px;
+		z-index: 3;
+	}
+	#hc_content .belt-item[data-idx="2"] {
+	    background: url('images/32936.png') no-repeat top left;
+		background-size: cover;
+	}
+	#hc_content .in-trunk[data-idx="2"] {
+		position: absolute;
+		top: 55px;
+		left: 188px;
+		z-index: 4;
+	}
+	#hc_content .belt-item[data-idx="3"] {
+	    background: url('images/32934.png') no-repeat top left;
+		background-size: cover;
+		height: 88px;
+	}
+	#hc_content .in-trunk[data-idx="3"] {
+		position: absolute;
+		top: 32px;
+		left: 120px;
+		z-index: 4;
+	}
+	</style>
+	
+	<div class="hc_initial_view">		
+		<a href="#" id="hc_expand" onclick="jQuery.hc_rm.expand(event); return false;">		
+			<img class="hc_banner hc_blockimg" src="images/33848.jpg" style="width:320px;height:50px;" />
+		</a>	
+
+	</div> <!-- end initial view content -->
+	
+	<div class="hc_content" id="hc_content" style="display:none;">
+		<div class="hc_closebtn" id="hc_closebtn" style="display:none;" onclick="jQuery.hc_rm.collapse(event); return false;">
+			<img src="images/33849.png" />
+		</div>
+	
+		<div class="hc_noclick" id="hc_noclick1">
+			<img src="images/32932.png" />
+		</div>
+		
+		<div id="hc_frame1" class="hc_frame" onclick="showFrame(2); return false;">
+			<img class="hc_text_1" src="images/32942.png" alt="" />
+			<img class="hc_versa_1" src="images/32941.png" />
+			<a class="hc_button_1" href="#" onclick="showFrame(2); return false;">
+				<img src="images/32943.png" alt="" />
+			</a>
+		</div>
+		
+		<div id="hc_frame2" class="hc_frame" style="display: none;" onclick="showFrame(3); return false;">
+			<img class="hc_text_2_1" src="images/32938.png" alt="" />
+			<img class="hc_text_2_2" src="images/32937.png" alt="" />
+			<img class="hc_versa_2" src="images/32940.png" />
+			<a class="hc_button_2" href="#" onclick="showFrame(3); return false;">
+				<img src="images/32939.png" alt="" />
+			</a>
+		</div>
+		
+		<div id="hc_frame3" class="hc_frame" style="display: none;">
+			<div class="belt-item" data-idx="0"></div>
+			<div class="belt-item" data-idx="1"></div>
+			<div class="belt-item" data-idx="2"></div>
+			<div class="belt-item" data-idx="3"></div>
+			<div class="car">
+				<div class="car-trunk"></div>
+			</div>
+			<div class="conveyor"></div>
+		</div>
+		<div id="end_button" class="hc_frame" style="display:none">
+			<a class="hc_button_3" href="#" onclick="showFrame(4); return false;">
+				<img src="images/32943.png" alt="" />
+			</a>
+		</div>
+		
+		<div id="hc_frame4" class="hc_frame" style="display: none;">
+			<img class="hc_text_4" src="images/32945.png" alt="" />
+			<img class="hc_versa_4" src="images/32944.png" />
+			<a class="hc_button_4" href="http://m.nissanusa.com/?original_path=/versa/&#frmVehicleLanding">
+				<img src="images/32943.png" alt="" />
+			</a>
+		</div>
+	</div><!-- end reveal content -->
+
+	<script type="text/javascript">
+		
+		/* DO NOT USE slashes for comments. */
+		/* use .toggle to reveal from left to right, down */
+		/* use .slideToggle to reveal from top to bottom */
+		/* any closing html tags must have the forward slash escaped,e.g. <\/div> */
+	
+		(function ($) {		
+			
+			var fifheight;
+					
+			$.hc_rm = {
+				getQP: function (p) {
+					if(window.location && typeof window.location.search === "string") {
+						var qArray = window.location.search.substr(1).split("&"),qParam,i;
+						for(i=0; i<qArray.length; i++) {
+							qParam = qArray[i].split("=");
+							if(qParam.length === 2 && qParam[0] === p) {
+								return unescape(qParam[1]);
+							}
+						}
+					}
+					return false;
+				},
+				/*getSQP: function(p) {
+					var scriptSrc = $("script[src*='as.aug.me']").attr('src');
+					var tmp = scriptSrc.split("?");
+					if(tmp.length > 1) {
+						var qArray = tmp[1].split("&"),qParam,i;
+						for(i=0; i<qArray.length; i++) {
+							qParam = qArray[i].split("=");
+							if(qParam.length === 2 && qParam[0] === p) {
+								return unescape(qParam[1]);
+							}
+						}
+					}
+					return false;
+				},*/
+				expand: function (e) {				
+					if (!e) { e = window.event; }
+					e.cancelBubble = true;
+					if (e.stopPropagation) e.stopPropagation();	
+					/* FIF support */
+					if(window.inDapIF === true) {
+						$("iframe",parent.document).each(function(iel, el){
+							if(el.contentWindow === window) {
+								fifheight = $(el).css("height");
+								$(el).css("height","511px");
+								return false;
+							}
+						});
+					}				
+					
+					/* mraid function call */
+					if(typeof mraid !== "undefined") {
+						mraid.useCustomClose(true);
+						mraid.expand();
+					}					
+					/* animations for expand */
+					$("#hc_richmedia .hc_content").show();
+					$("#hc_richmedia .hc_closebtn").show();
+					$("#hc_richmedia .hc_initial_view").hide();
+					
+					/* Hip expansion tracking */				
+					/*$("#hc_richmedia").append('<img src="#trk:expansion#?cb='+new Date().getTime()+'" style="position:absolute;height:1px;width:1px;" />');	*/
+					
+					/* 3rd party expansion tracker */
+     				//if(this.getSQP('exp') !== false) {
+     					/*$("#hc_richmedia").append('<img src="'+decodeURIComponent(this.getSQP('exp'))+'&cb='+new Date().getTime()+'" style="position:absolute;height:1px;width:1px;" />');*/
+     				//}
+     								
+					return false;
+				},
+				collapse: function(e) {
+					if (!e) { e = window.event; }
+					e.cancelBubble = true;
+					if (e.stopPropagation) e.stopPropagation();	
+					/* FIF support */
+					if(window.inDapIF === true) {
+						$("iframe",parent.document).each(function(iel, el){
+							if(el.contentWindow === window) {
+								$(el).css("height",fifheight);
+								return false;
+							}
+						});
+					}				
+					/* mraid function call */
+					if(typeof mraid !== "undefined") {
+						mraid.close();
+					}					
+					/* animations for collapse */
+					$("#hc_richmedia .hc_initial_view").show();
+					$("#hc_richmedia .hc_content").hide();
+					$("#hc_richmedia .hc_closebtn").hide();
+					/*$("#hc_richmedia").append('<img src="#trk:collapse#?cb='+new Date().getTime()+'" style="position:absolute;height:1px;width:1px;" />');	*/					
+					return false;													
+				},
+				engage: function(e) {
+					if (!e) { e = window.event; }
+					e.cancelBubble = true;
+					if (e.stopPropagation) e.stopPropagation();
+					/*$("#hc_richmedia").append('<img src="#trk:engage#?cb='+new Date().getTime()+'" style="position:absolute;height:1px;width:1px;" />');*/
+					return false;
+				}
+			};
+		}(jQuery));
+		
+		function showFrame(frame) {
+			$('.hc_frame').hide();
+			$('#hc_frame'+frame).show();
+			
+			if (frame == 3) {
+				/* Conveyer Belt Code */
+				/*setTimeout(function() {showFrame(4);}, 17000);*/
+				
+				var dragging, init_item_pos, start_x, start_y;
+
+				function move_on_belt(elem) {
+					$(elem)
+						.css({
+							"left": (Math.round(Math.random() * 60) + 100) + "px",
+							"z-index": 11,
+							"top": "400px",
+							"display": "block",
+							"opacity": 1
+						})
+						.animate({
+							"top": "75px"
+						}, 3000, "linear", function () {
+							drop_off_belt(this);
+						});
+				}
+				
+				function drop_off_belt(elem) {
+					$(elem)
+						.css("z-index", 1)
+						.animate({
+							"top": "+=100px",
+							"opacity": 0
+						}, 600, function () {
+							window.setTimeout(function () {
+								move_on_belt(elem);
+							}, 750);
+						});
+				}
+				
+				function inside_trunk(belt_item) {
+					var car_trunk = $("#hc_content .car-trunk");
+					
+					return (
+						car_trunk.offset().left <= belt_item.offset().left &&
+						car_trunk.offset().top <= belt_item.offset().top &&
+						car_trunk.offset().left + car_trunk.width() >= belt_item.offset().left + belt_item.width() &&
+						car_trunk.offset().top + car_trunk.height() >= belt_item.offset().top + belt_item.height()
+					);
+				}
+				
+				function drive_off() {
+					$('#end_button').show();
+					/*$("#hc_content").find(".belt-item, .car-trunk").hide();
+					$("#hc_content .car").animate({
+						"top": "-=200px"
+					}, 600);*/
+				}
+				
+				/* place each item on the belt */
+				$("#hc_content div.belt-item").each(function (i, elem) {
+				
+					window.setTimeout(function () {
+						move_on_belt(elem);
+					}, 750 * (Math.random() + i + 1));
+				
+				});
+			
+				$("#hc_frame3")
+					.bind("touchstart mousedown", function (e) {
+						e.preventDefault();
+						
+						dragging = $(e.target);
+			
+						if (dragging.hasClass("belt-item") && !dragging.hasClass("in-trunk")) {
+							dragging.stop();
+							
+							init_item_pos = {
+								left: dragging.position().left,
+								top: dragging.position().top
+							};
+							
+						    if (e.originalEvent.touches) {
+						        start_x = e.originalEvent.touches[0].pageX;
+						        start_y = e.originalEvent.touches[0].pageY;
+						    } else {
+						        start_x = e.originalEvent.clientX;
+						        start_y = e.originalEvent.clientY;
+						    }			
+						} else {
+							dragging = null;
+						}
+					})
+					.bind("touchmove mousemove", function (e) {
+						e.preventDefault();
+			
+						if (dragging) {
+						
+							var new_x, new_y;
+			
+							if (e.originalEvent.touches) {
+						        new_x = e.originalEvent.touches[0].pageX;
+						        new_y = e.originalEvent.touches[0].pageY;
+						    } else {
+						        new_x = e.originalEvent.clientX;
+						        new_y = e.originalEvent.clientY;
+						    }
+			
+							dragging.css({
+								left: (init_item_pos.left + (new_x - start_x)) + "px",
+								top: (init_item_pos.top + (new_y - start_y)) + "px"
+							});
+			
+						}		 
+					})
+					.bind("touchend mouseup", function () {
+						
+						if (dragging) {
+							/*if (inside_trunk(dragging)) {
+								dragging.addClass("in-trunk");
+								if ($("#hc_content .belt-item:not(.in-trunk)").length === 0) {
+									drive_off();
+								}
+							} else {
+								var car_trunk = $("#hc_content .car-trunk");
+								var widthEnd, widthBegin, heightEnd, heightBegin, newLeft, newTop;
+								
+								widthBegin = car_trunk.offset().left;
+								widthEnd = widthBegin + car_trunk.width() - 60;
+								newLeft = Math.floor(Math.random()*(widthEnd - widthBegin + 1) + widthBegin);
+								
+								heightBegin = car_trunk.offset().top;
+								heightEnd = heightBegin + car_trunk.height() - 60;
+								newTop = Math.floor(Math.random()*(heightEnd - heightBegin + 1) + heightBegin);*/
+								
+								/*drop_off_belt(dragging);*/
+								/*console.log("WIDTH: " + widthBegin + " to " + widthEnd + ": " + newLeft);
+								console.log("HEIGHT: " + heightBegin + " to " + heightEnd + ": " + newTop);
+								dragging.offset({
+									left: newLeft,
+									top: newTop
+								});
+								dragging.addClass("in-trunk");
+								if ($("#hc_content .belt-item:not(.in-trunk)").length === 0) {
+									drive_off();
+								}
+							}*/
+							dragging.attr('style', 'display: block');
+							dragging.addClass("in-trunk");
+							if ($("#hc_content .belt-item:not(.in-trunk)").length === 0) {
+								drive_off();
+							}
+						}
+						
+						dragging = null;
+					});
+				
+				/* END: Conveyer Belt Code */
+			}
+		}
+		
+		
+			
+		/* Add mraid lister */
+		if(typeof mraid !== "undefined") {
+			mraid.addEventListener("stateChange", handleStateChanges);
+		}
+		
+		/* Mraid Handle State Change */
+		function handleStateChanges() {
+
+			switch(mraid.getState()) {
+				case "expanded":
+					jQuery.hc_rm.expand();
+					break;
+				case "default":
+					jQuery.hc_rm.collapse();
+					break;
+			}
+			
+		}
+	
+		$(document).ready(function() {
+			/*var i = new Image();
+			i.src = 'http://ad.doubleclick.net/ad/N3340.285074.HIPCRICKET/B7859133.5;sz=1x1;pc=[TPAS_ID];'+new Date().getTime()+'?';*/
+		});
+	</script>
+	
+</div><!-- end required wrapper -->
